@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+
+    <div id="totalDistance">Total Distance covered by Car 0: </div>
+<script>
+    let ws = new WebSocket("ws://127.0.0.1:5678/")
+        // messages = document.createElement('ul');
+    ws.onmessage = function (event) {
+        document.getElementById('totalDistance').innerText = event.data;
+        // let messages = document.getElementsByTagName('ul')[0],
+        //     message = document.createElement('li'),
+        //     content = document.createTextNode(event.data);
+        // message.appendChild(content);
+        // messages.appendChild(message);
+    };
+    // document.body.appendChild(messages);
+</script>
+</body>
+</html>
