@@ -147,7 +147,7 @@ class PacketLapData(ctypes.LittleEndianStructure):
     _pack_ = 1
     _fields_ = [
         ('m_header', PacketHeader),  # Header
-        ('laps_data', LapData * 20)  # Lap data for all cars on track
+        ('m_lapData', LapData * 20)  # Lap data for all cars on track
     ]
 
 
@@ -234,7 +234,7 @@ class PacketParticipantsData(ctypes.LittleEndianStructure):
     _fields_ = [
         ('m_header', PacketHeader),  # Header
         ('m_numCars', ctypes.c_ubyte),  # Number of cars in the data
-        ('participants_data', ParticipantData * 20),
+        ('m_participants', ParticipantData * 20),
     ]
 
 
